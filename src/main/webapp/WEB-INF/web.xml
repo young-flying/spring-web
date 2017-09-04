@@ -8,7 +8,18 @@
         <servlet-name>example</servlet-name>  
         <url-pattern>*.form</url-pattern>  
     </servlet-mapping>   -->
+   <!--  <filter>
+	    <filter-name>springSessionRepositoryFilter</filter-name>
+	    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>springSessionRepositoryFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	        <dispatcher>REQUEST</dispatcher>
+	        <dispatcher>ERROR</dispatcher>
+	</filter-mapping> -->
     
+    <util:constant static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/>
     
     <servlet>
 		<servlet-name>springMVC</servlet-name>
